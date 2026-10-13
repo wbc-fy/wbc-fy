@@ -23,6 +23,11 @@
 
 - 独立设计与实现量化分析可视化大屏，整合行情概览、指标分析与监控数据的展示。
 
+**数据收集**
+
+- 负责 Python 采集服务的采集适配器开发，接入 Tushare 与 AkShare 双数据源，基于统一基类实现日线行情、每日估值、交易日历及指数/行业成分股的采集接口。
+- 实现数据校验与标准化：封装带协议检查的 Tushare 客户端，对网络、配额、权限、Schema 等异常进行分类隔离，统一各数据源的字段格式后再进入存储链路。
+
 **后端开发**
 
 - 参与 Market API 服务（Java / Spring Boot）的开发，实现股票池、K 线与实时指标的查询接口，数据层对接 MySQL 与 ClickHouse，并通过 Kafka 事务消费完成指标落库，为前端提供真实行情数据。
@@ -33,7 +38,7 @@
 
 ### 技术栈
 
-Vue 3 / Vite / JavaScript / Node.js / Java / Spring Boot / Kafka / MySQL / ClickHouse / Git
+Python / Pandas / Vue 3 / Vite / JavaScript / Java / Spring Boot / Kafka / MySQL / ClickHouse / Git
 
 ---
 
